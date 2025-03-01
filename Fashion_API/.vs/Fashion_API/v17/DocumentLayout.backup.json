@@ -1,0 +1,235 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\taida\\source\\repos\\Fashion\\Fashion_API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7084D33A-4C3F-44A7-ADC7-D2C2E701837F}|Fashion_API\\Fashion_API.csproj|c:\\users\\taida\\source\\repos\\fashion\\fashion_api\\fashion_api\\service\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7084D33A-4C3F-44A7-ADC7-D2C2E701837F}|Fashion_API\\Fashion_API.csproj|solutionrelative:fashion_api\\service\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7084D33A-4C3F-44A7-ADC7-D2C2E701837F}|Fashion_API\\Fashion_API.csproj|c:\\users\\taida\\source\\repos\\fashion\\fashion_api\\fashion_api\\dto\\productsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7084D33A-4C3F-44A7-ADC7-D2C2E701837F}|Fashion_API\\Fashion_API.csproj|solutionrelative:fashion_api\\dto\\productsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7084D33A-4C3F-44A7-ADC7-D2C2E701837F}|Fashion_API\\Fashion_API.csproj|c:\\users\\taida\\source\\repos\\fashion\\fashion_api\\fashion_api\\service\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7084D33A-4C3F-44A7-ADC7-D2C2E701837F}|Fashion_API\\Fashion_API.csproj|solutionrelative:fashion_api\\service\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7084D33A-4C3F-44A7-ADC7-D2C2E701837F}|Fashion_API\\Fashion_API.csproj|c:\\users\\taida\\source\\repos\\fashion\\fashion_api\\fashion_api\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7084D33A-4C3F-44A7-ADC7-D2C2E701837F}|Fashion_API\\Fashion_API.csproj|solutionrelative:fashion_api\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7084D33A-4C3F-44A7-ADC7-D2C2E701837F}|Fashion_API\\Fashion_API.csproj|c:\\users\\taida\\source\\repos\\fashion\\fashion_api\\fashion_api\\model\\categories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7084D33A-4C3F-44A7-ADC7-D2C2E701837F}|Fashion_API\\Fashion_API.csproj|solutionrelative:fashion_api\\model\\categories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7084D33A-4C3F-44A7-ADC7-D2C2E701837F}|Fashion_API\\Fashion_API.csproj|c:\\users\\taida\\source\\repos\\fashion\\fashion_api\\fashion_api\\model\\sorttypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7084D33A-4C3F-44A7-ADC7-D2C2E701837F}|Fashion_API\\Fashion_API.csproj|solutionrelative:fashion_api\\model\\sorttypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7084D33A-4C3F-44A7-ADC7-D2C2E701837F}|Fashion_API\\Fashion_API.csproj|c:\\users\\taida\\source\\repos\\fashion\\fashion_api\\fashion_api\\model\\producttypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7084D33A-4C3F-44A7-ADC7-D2C2E701837F}|Fashion_API\\Fashion_API.csproj|solutionrelative:fashion_api\\model\\producttypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7084D33A-4C3F-44A7-ADC7-D2C2E701837F}|Fashion_API\\Fashion_API.csproj|c:\\users\\taida\\source\\repos\\fashion\\fashion_api\\fashion_api\\model\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7084D33A-4C3F-44A7-ADC7-D2C2E701837F}|Fashion_API\\Fashion_API.csproj|solutionrelative:fashion_api\\model\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7084D33A-4C3F-44A7-ADC7-D2C2E701837F}|Fashion_API\\Fashion_API.csproj|c:\\users\\taida\\source\\repos\\fashion\\fashion_api\\fashion_api\\model\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7084D33A-4C3F-44A7-ADC7-D2C2E701837F}|Fashion_API\\Fashion_API.csproj|solutionrelative:fashion_api\\model\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7084D33A-4C3F-44A7-ADC7-D2C2E701837F}|Fashion_API\\Fashion_API.csproj|c:\\users\\taida\\source\\repos\\fashion\\fashion_api\\fashion_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7084D33A-4C3F-44A7-ADC7-D2C2E701837F}|Fashion_API\\Fashion_API.csproj|solutionrelative:fashion_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7084D33A-4C3F-44A7-ADC7-D2C2E701837F}|Fashion_API\\Fashion_API.csproj|c:\\users\\taida\\source\\repos\\fashion\\fashion_api\\fashion_api\\model\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7084D33A-4C3F-44A7-ADC7-D2C2E701837F}|Fashion_API\\Fashion_API.csproj|solutionrelative:fashion_api\\model\\databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "C:\\Users\\taida\\source\\repos\\Fashion\\Fashion_API\\Fashion_API\\Service\\IProductService.cs",
+              "RelativeDocumentMoniker": "Fashion_API\\Service\\IProductService.cs",
+              "ToolTip": "C:\\Users\\taida\\source\\repos\\Fashion\\Fashion_API\\Fashion_API\\Service\\IProductService.cs",
+              "RelativeToolTip": "Fashion_API\\Service\\IProductService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T13:49:07.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductsDTO.cs",
+              "DocumentMoniker": "C:\\Users\\taida\\source\\repos\\Fashion\\Fashion_API\\Fashion_API\\DTO\\ProductsDTO.cs",
+              "RelativeDocumentMoniker": "Fashion_API\\DTO\\ProductsDTO.cs",
+              "ToolTip": "C:\\Users\\taida\\source\\repos\\Fashion\\Fashion_API\\Fashion_API\\DTO\\ProductsDTO.cs",
+              "RelativeToolTip": "Fashion_API\\DTO\\ProductsDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T13:48:17.563Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\taida\\source\\repos\\Fashion\\Fashion_API\\Fashion_API\\Service\\ProductService.cs",
+              "RelativeDocumentMoniker": "Fashion_API\\Service\\ProductService.cs",
+              "ToolTip": "C:\\Users\\taida\\source\\repos\\Fashion\\Fashion_API\\Fashion_API\\Service\\ProductService.cs*",
+              "RelativeToolTip": "Fashion_API\\Service\\ProductService.cs*",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T13:25:22.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Response.cs",
+              "DocumentMoniker": "C:\\Users\\taida\\source\\repos\\Fashion\\Fashion_API\\Fashion_API\\Model\\Response.cs",
+              "RelativeDocumentMoniker": "Fashion_API\\Model\\Response.cs",
+              "ToolTip": "C:\\Users\\taida\\source\\repos\\Fashion\\Fashion_API\\Fashion_API\\Model\\Response.cs",
+              "RelativeToolTip": "Fashion_API\\Model\\Response.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T13:19:23.622Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\taida\\source\\repos\\Fashion\\Fashion_API\\Fashion_API\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Fashion_API\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\taida\\source\\repos\\Fashion\\Fashion_API\\Fashion_API\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Fashion_API\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABoAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T13:18:01.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Categories.cs",
+              "DocumentMoniker": "C:\\Users\\taida\\source\\repos\\Fashion\\Fashion_API\\Fashion_API\\Model\\Categories.cs",
+              "RelativeDocumentMoniker": "Fashion_API\\Model\\Categories.cs",
+              "ToolTip": "C:\\Users\\taida\\source\\repos\\Fashion\\Fashion_API\\Fashion_API\\Model\\Categories.cs",
+              "RelativeToolTip": "Fashion_API\\Model\\Categories.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T12:14:09.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SortTypes.cs",
+              "DocumentMoniker": "C:\\Users\\taida\\source\\repos\\Fashion\\Fashion_API\\Fashion_API\\Model\\SortTypes.cs",
+              "RelativeDocumentMoniker": "Fashion_API\\Model\\SortTypes.cs",
+              "ToolTip": "C:\\Users\\taida\\source\\repos\\Fashion\\Fashion_API\\Fashion_API\\Model\\SortTypes.cs",
+              "RelativeToolTip": "Fashion_API\\Model\\SortTypes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T13:02:12.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductTypes.cs",
+              "DocumentMoniker": "C:\\Users\\taida\\source\\repos\\Fashion\\Fashion_API\\Fashion_API\\Model\\ProductTypes.cs",
+              "RelativeDocumentMoniker": "Fashion_API\\Model\\ProductTypes.cs",
+              "ToolTip": "C:\\Users\\taida\\source\\repos\\Fashion\\Fashion_API\\Fashion_API\\Model\\ProductTypes.cs",
+              "RelativeToolTip": "Fashion_API\\Model\\ProductTypes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T12:16:21.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Products.cs",
+              "DocumentMoniker": "C:\\Users\\taida\\source\\repos\\Fashion\\Fashion_API\\Fashion_API\\Model\\Products.cs",
+              "RelativeDocumentMoniker": "Fashion_API\\Model\\Products.cs",
+              "ToolTip": "C:\\Users\\taida\\source\\repos\\Fashion\\Fashion_API\\Fashion_API\\Model\\Products.cs",
+              "RelativeToolTip": "Fashion_API\\Model\\Products.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T12:14:00.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DatabaseContext.cs",
+              "DocumentMoniker": "C:\\Users\\taida\\source\\repos\\Fashion\\Fashion_API\\Fashion_API\\Model\\DatabaseContext.cs",
+              "RelativeDocumentMoniker": "Fashion_API\\Model\\DatabaseContext.cs",
+              "ToolTip": "C:\\Users\\taida\\source\\repos\\Fashion\\Fashion_API\\Fashion_API\\Model\\DatabaseContext.cs",
+              "RelativeToolTip": "Fashion_API\\Model\\DatabaseContext.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBcAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T12:09:27.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\taida\\source\\repos\\Fashion\\Fashion_API\\Fashion_API\\Program.cs",
+              "RelativeDocumentMoniker": "Fashion_API\\Program.cs",
+              "ToolTip": "C:\\Users\\taida\\source\\repos\\Fashion\\Fashion_API\\Fashion_API\\Program.cs",
+              "RelativeToolTip": "Fashion_API\\Program.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAABcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-01T12:08:23.14Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 979,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1005,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
