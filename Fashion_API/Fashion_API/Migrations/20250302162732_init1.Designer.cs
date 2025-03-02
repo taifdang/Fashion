@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Fashion_API.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20250301131411_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20250302162732_init1")]
+    partial class init1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -37,18 +37,41 @@ namespace Fashion_API.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
-                    b.Property<int>("productType_id")
+                    b.Property<int>("productTypeId")
                         .HasColumnType("int");
 
                     b.Property<string>("slug")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
 
-                    b.HasIndex("productType_id");
+                    b.HasIndex("productTypeId");
 
                     b.ToTable("categories");
+                });
+
+            modelBuilder.Entity("Fashion_API.Model.ProductGallery", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
+
+                    b.Property<Guid?>("imageKey")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("imageUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("productId")
+                        .HasColumnType("int");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("productId");
+
+                    b.ToTable("productGalleries");
                 });
 
             modelBuilder.Entity("Fashion_API.Model.Products", b =>
@@ -59,7 +82,7 @@ namespace Fashion_API.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
 
-                    b.Property<int>("category_id")
+                    b.Property<int>("categoryId")
                         .HasColumnType("int");
 
                     b.Property<string>("description")
@@ -68,8 +91,8 @@ namespace Fashion_API.Migrations
                     b.Property<double?>("discount")
                         .HasColumnType("float");
 
-                    b.Property<string>("image")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<Guid?>("image")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("name")
                         .IsRequired()
@@ -80,12 +103,11 @@ namespace Fashion_API.Migrations
                         .HasColumnType("float");
 
                     b.Property<string>("slug")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
 
-                    b.HasIndex("category_id");
+                    b.HasIndex("categoryId");
 
                     b.ToTable("products");
                 });
@@ -104,7 +126,6 @@ namespace Fashion_API.Migrations
                         .HasColumnType("nvarchar(200)");
 
                     b.Property<string>("slug")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
@@ -116,16 +137,31 @@ namespace Fashion_API.Migrations
                 {
                     b.HasOne("Fashion_API.Model.ProductTypes", "productTypes")
                         .WithMany("categories")
-                        .HasForeignKey("productType_id");
+                        .HasForeignKey("productTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("productTypes");
+                });
+
+            modelBuilder.Entity("Fashion_API.Model.ProductGallery", b =>
+                {
+                    b.HasOne("Fashion_API.Model.Products", "products")
+                        .WithMany("productGalleries")
+                        .HasForeignKey("productId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("products");
                 });
 
             modelBuilder.Entity("Fashion_API.Model.Products", b =>
                 {
                     b.HasOne("Fashion_API.Model.Categories", "categories")
                         .WithMany("products")
-                        .HasForeignKey("category_id");
+                        .HasForeignKey("categoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("categories");
                 });
@@ -133,6 +169,11 @@ namespace Fashion_API.Migrations
             modelBuilder.Entity("Fashion_API.Model.Categories", b =>
                 {
                     b.Navigation("products");
+                });
+
+            modelBuilder.Entity("Fashion_API.Model.Products", b =>
+                {
+                    b.Navigation("productGalleries");
                 });
 
             modelBuilder.Entity("Fashion_API.Model.ProductTypes", b =>

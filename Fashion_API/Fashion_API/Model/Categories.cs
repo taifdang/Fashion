@@ -12,7 +12,7 @@ namespace Fashion_API.Model
         [StringLength(200, MinimumLength = 1)]
         public string name { get; set; }
         public string? slug { get; set; }      
-        public int productType_id { get; set; }
+        public int productTypeId { get; set; }
         public ProductTypes productTypes { get; set; }
         public ICollection<Products> products { get; set; }
        

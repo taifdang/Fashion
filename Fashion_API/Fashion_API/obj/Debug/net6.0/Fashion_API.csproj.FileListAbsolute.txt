@@ -78,3 +78,4 @@ C:\Users\taida\source\repos\Fashion\Fashion_API\Fashion_API\obj\Debug\net6.0\Fas
 C:\Users\taida\source\repos\Fashion\Fashion_API\Fashion_API\obj\Debug\net6.0\ref\Fashion_API.dll
 C:\Users\taida\source\repos\Fashion\Fashion_API\Fashion_API\bin\Debug\net6.0\Humanizer.dll
 C:\Users\taida\source\repos\Fashion\Fashion_API\Fashion_API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\taida\source\repos\Fashion\Fashion_API\Fashion_API\obj\Debug\net6.0\Fashion_API.sourcelink.json

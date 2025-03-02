@@ -16,9 +16,10 @@ namespace Fashion_API.Model
         public double price { get;set; }
         public double? discount { get; set; }
         public string? description { get; set; }
-        public string? image { get; set; }
-        public int category_id { get;set; }
+        public Guid? image { get; set; }
+        public int categoryId { get;set; }
         public Categories categories { get; set; }
+        public ICollection<ProductGallery> productGalleries { get; set; }
 
 
     }
