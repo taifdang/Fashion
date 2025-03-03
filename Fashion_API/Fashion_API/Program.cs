@@ -24,6 +24,8 @@ builder.Services.AddCors(
     );
 //#3_Add Scoped
 builder.Services.AddScoped<IProductService, ProductService>();
+//#4_jsoninorse
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

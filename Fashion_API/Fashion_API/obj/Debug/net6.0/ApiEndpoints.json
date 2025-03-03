@@ -48,6 +48,11 @@
         "IsRequired": false
       },
       {
+        "Name": "productGalleries",
+        "Type": "System.Collections.Generic.List\u00601[[Fashion_API.Model.ProductGallery, Fashion_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      },
+      {
         "Name": "file",
         "Type": "Microsoft.AspNetCore.Http.IFormFile",
         "IsRequired": false
@@ -112,6 +117,11 @@
       {
         "Name": "category_id",
         "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "productGalleries",
+        "Type": "System.Collections.Generic.List\u00601[[Fashion_API.Model.ProductGallery, Fashion_API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "IsRequired": false
       },
       {

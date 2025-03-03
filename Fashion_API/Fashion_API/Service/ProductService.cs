@@ -68,41 +68,54 @@ namespace Fashion_API.Service
         public async Task<Products> post([FromForm] ProductDTO productDTO)
         {
 
-            Guid key = Guid.NewGuid();
+            //Guid key = Guid.NewGuid();
             try
             {
                 var product = new Products
                 {
                     name = productDTO.name,
                     slug = Slugify.VietnamSigns(productDTO.name),
-                    image = key,
+                    //image = key,
                     price = productDTO.price,
                     categoryId = productDTO.category_id,
+                    //productGalleries = new List<ProductGallery>() { new ProductGallery { imageKey = key } }
                 };
-                
                 _databaseContext.products.Add(product);
-
-                //_databaseContext.productGalleries.Add(new ProductGallery
-                //{
-
-                //    imageKey = key,
-                //    productId = productDTO.id
-
-                //});
-                product.productGalleries.Add(new ProductGallery
-                {
-                    imageKey = key,
-                    productId = productDTO.id
-                });
-
                 await _databaseContext.SaveChangesAsync();
-                return product;              
+                return product;
             }
             catch
             {
                 return null;
             }
-            
+            //using (var transaction = _databaseContext.Database.BeginTransaction() )
+            //{
+            //    try
+            //    {
+            //        var product = new Products
+            //        {
+            //            name = productDTO.name,
+            //            slug = Slugify.VietnamSigns(productDTO.name),
+            //            image = key,
+            //            price = productDTO.price,
+            //            categoryId = productDTO.category_id,
+            //            //productGalleries = new List<ProductGallery>() { new ProductGallery { imageKey = key } }
+            //        };
+            //        _databaseContext.products.Add(product);
+            //        await _databaseContext.SaveChangesAsync();
+            //        transaction.Commit();
+            //        var gallery =new ProductGallery { imageKey = key };
+            //        _databaseContext.productGalleries.Add(gallery);
+            //        await _databaseContext.SaveChangesAsync();
+
+            //        return product;
+            //    }
+            //    catch
+            //    {
+            //        transaction.Rollback();
+            //        return null;
+            //    }
+            //}
 
         }
 

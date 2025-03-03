@@ -46,7 +46,7 @@ namespace Fashion_API.Controllers
         public async Task<ActionResult> Post([FromForm]ProductDTO productDTO)
         {
             var product = await _productService.post(productDTO);
-            if (product == null) return Ok("fail");
+            //if (product == null) return Ok("fail");
           
             
             return Ok(product);

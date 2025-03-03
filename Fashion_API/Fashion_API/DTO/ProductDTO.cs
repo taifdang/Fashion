@@ -11,7 +11,8 @@ namespace Fashion_API.DTO
         public double? discount { get; set; }
         public string? description { get; set; }
         //public Guid? image { get; set; }
-        public int category_id { get; set; }
+        public int category_id { get; set; }   
+        public List<ProductGallery>? productGalleries { get; set; }
         public IFormFile? file { get; set; }
     }
 }
