@@ -12,7 +12,7 @@ namespace Fashion_API.DTO
         public string? description { get; set; }
         //public Guid? image { get; set; }
         public int category_id { get; set; }   
-        public List<ProductGallery>? productGalleries { get; set; }
+        //public List<ProductGallery>? productGalleries { get; set; }
         public IFormFile? file { get; set; }
     }
 }

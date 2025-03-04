@@ -4,6 +4,7 @@ using Fashion_API.Service;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.Threading.Tasks;
+using System.Transactions;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -25,10 +26,25 @@ namespace Fashion_API.Controllers
         [HttpGet]
         public async Task<ActionResult> Get()
         {
-            var product = await _productService.get();
-            if (product == null) return Ok();
+            //var product = await _productService.get();
+            //if (product == null) return Ok();
             //var data = _productService.list_pagination(product, 1, 5);
-            return Ok(product);
+            //using(var transaction = await _databaseContext.Database.BeginTransactionAsync())
+            //{
+            //    try
+            //    {
+            //        //
+                    
+
+            //        transaction.Commit();
+            //    }
+            //    catch
+            //    {
+            //        transaction.Rollback();
+            //    }
+            //}
+            //var data = await _databaseContext.
+            return Ok();
         }
 
         // GET api/<ProductController>/5

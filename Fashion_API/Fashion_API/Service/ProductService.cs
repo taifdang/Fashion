@@ -74,10 +74,10 @@ namespace Fashion_API.Service
                 var product = new Products
                 {
                     name = productDTO.name,
-                    slug = Slugify.VietnamSigns(productDTO.name),
+                    //slug = Slugify.VietnamSigns(productDTO.name),
                     //image = key,
-                    price = productDTO.price,
-                    categoryId = productDTO.category_id,
+                    //price = productDTO.price,
+                    category_id = productDTO.category_id,
                     //productGalleries = new List<ProductGallery>() { new ProductGallery { imageKey = key } }
                 };
                 _databaseContext.products.Add(product);
@@ -129,10 +129,10 @@ namespace Fashion_API.Service
             {
                 product.id = productDTO.id;
                 product.name = productDTO.name;
-                product.slug = Slugify.VietnamSigns(productDTO.name);
-                product.price = productDTO.price;
+                //product.slug = Slugify.VietnamSigns(productDTO.name);
+                //product.price = productDTO.price;
                 product.description = productDTO.description;
-                product.categoryId = productDTO.category_id;
+                product.category_id = productDTO.category_id;
 
                 await _databaseContext.SaveChangesAsync();
             }

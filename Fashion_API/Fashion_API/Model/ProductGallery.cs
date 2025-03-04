@@ -10,13 +10,17 @@ namespace Fashion_API.Model
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int id { get; set; }        
-        public Guid? imageKey { get; set; }
-        public string? imageUrl { get; set; }
-        //public int productId { get; set; }
-        [JsonIgnore]
+        public int id { get; set; }
+        //public Guid? imageKey { get; set; }
+        public int product_id { get; set; }
+        public string? image_url { get; set; }          
         //public Products products { get; set; }
-        public ProductVariant productVariant { get; set; }
+        //public int variant_id { get; set; }
+        //[JsonIgnore]
+        //public ProductVariant product_variant { get; set; }
+
+        //constraint
+        public Products products { get; set; }
     }
 }
 

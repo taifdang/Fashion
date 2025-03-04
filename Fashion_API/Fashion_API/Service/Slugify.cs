@@ -25,13 +25,13 @@ namespace Fashion_API.Service
             bool isAccent = Regex.IsMatch(pharse, @"[àáãảạăằắẳẵặâầấẩẫậèéẻẽẹêềếểễệđùúủũụưừứửữựòóỏõọôồốổỗộơờớởỡợìíỉĩịýỳỹỵỷ]");
             if (!isAccent) return pharse;
 
-            for(int i = 1; i < vietnamese_alphabet.Length; i++)
-            {
-                for(int j = 0; j < vietnamese_alphabet[i].Length; j++)
-                {
-                    pharse = pharse.Replace(vietnamese_alphabet[i][j], vietnamese_alphabet[0][i-1]);
-                }
-            }           
+            //for(int i = 1; i < vietnamese_alphabet.Length; i++)
+            //{
+            //    for(int j = 0; j < vietnamese_alphabet[i].Length; j++)
+            //    {
+            //        pharse = pharse.Replace(vietnamese_alphabet[i][j], vietnamese_alphabet[0][i-1]);
+            //    }
+            //}           
             pharse = pharse.Replace(" ", "-");
             return pharse;
         }

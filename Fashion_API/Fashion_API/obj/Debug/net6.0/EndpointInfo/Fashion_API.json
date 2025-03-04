@@ -12,7 +12,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       },
@@ -48,12 +48,6 @@
                     "type": "integer",
                     "format": "int32"
                   },
-                  "productGalleries": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/ProductGallery"
-                    }
-                  },
                   "file": {
                     "type": "string",
                     "format": "binary"
@@ -79,9 +73,6 @@
                 "category_id": {
                   "style": "form"
                 },
-                "productGalleries": {
-                  "style": "form"
-                },
                 "file": {
                   "style": "form"
                 }
@@ -91,7 +82,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -114,7 +105,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       },
@@ -161,12 +152,6 @@
                     "type": "integer",
                     "format": "int32"
                   },
-                  "productGalleries": {
-                    "type": "array",
-                    "items": {
-                      "$ref": "#/components/schemas/ProductGallery"
-                    }
-                  },
                   "file": {
                     "type": "string",
                     "format": "binary"
@@ -192,9 +177,6 @@
                 "category_id": {
                   "style": "form"
                 },
-                "productGalleries": {
-                  "style": "form"
-                },
                 "file": {
                   "style": "form"
                 }
@@ -204,7 +186,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       },
@@ -225,95 +207,172 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
     },
-    "/WeatherForecast": {
+    "/api/variant": {
       "get": {
         "tags": [
-          "WeatherForecast"
+          "Variant"
         ],
-        "operationId": "GetWeatherForecast",
         "responses": {
           "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Variant"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "productId": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "colorId": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "sizeId": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "quantity": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
                   }
                 }
               },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
+              "encoding": {
+                "id": {
+                  "style": "form"
+                },
+                "productId": {
+                  "style": "form"
+                },
+                "colorId": {
+                  "style": "form"
+                },
+                "sizeId": {
+                  "style": "form"
+                },
+                "quantity": {
+                  "style": "form"
+                },
+                "file": {
+                  "style": "form"
                 }
               }
             }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/variant/{id}": {
+      "get": {
+        "tags": [
+          "Variant"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Variant"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Variant"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
     }
   },
-  "components": {
-    "schemas": {
-      "ProductGallery": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "imageKey": {
-            "type": "string",
-            "format": "uuid",
-            "nullable": true
-          },
-          "imageUrl": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "WeatherForecast": {
-        "type": "object",
-        "properties": {
-          "date": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "temperatureC": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "temperatureF": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
-          },
-          "summary": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      }
-    }
-  }
+  "components": { }
 }

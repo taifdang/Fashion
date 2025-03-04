@@ -30,20 +30,19 @@ namespace Fashion_API.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
 
+                    b.Property<string>("image")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("name")
                         .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
-
-                    b.Property<int>("productTypeId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("slug")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("type_id")
+                        .HasColumnType("int");
 
                     b.HasKey("id");
 
-                    b.HasIndex("productTypeId");
+                    b.HasIndex("type_id");
 
                     b.ToTable("categories");
 
@@ -52,94 +51,37 @@ namespace Fashion_API.Migrations
                         {
                             id = 1,
                             name = "Áo thun",
-                            productTypeId = 1,
-                            slug = "ao-thun"
+                            type_id = 1
                         },
                         new
                         {
                             id = 2,
                             name = "Áo sơ mi",
-                            productTypeId = 1,
-                            slug = "ao-so-mi"
+                            type_id = 1
                         },
                         new
                         {
                             id = 3,
                             name = "Quần thun",
-                            productTypeId = 2,
-                            slug = "quan-thun"
+                            type_id = 2
                         },
                         new
                         {
                             id = 4,
                             name = "Quần kaki",
-                            productTypeId = 2,
-                            slug = "quan-kaki"
+                            type_id = 2
                         },
                         new
                         {
                             id = 5,
                             name = "Mũ lưỡi trai",
-                            productTypeId = 3,
-                            slug = "mu-luoi-trai"
+                            type_id = 3
                         },
                         new
                         {
                             id = 6,
                             name = "Túi xách",
-                            productTypeId = 4,
-                            slug = "tui-xach"
-                        });
-                });
-
-            modelBuilder.Entity("Fashion_API.Model.Color", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
-
-                    b.Property<string>("hexCode")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("id");
-
-                    b.ToTable("colors");
-
-                    b.HasData(
-                        new
-                        {
-                            id = 1,
-                            hexCode = "#000000",
-                            name = "Đen"
-                        },
-                        new
-                        {
-                            id = 2,
-                            hexCode = "#FFFFFF",
-                            name = "Trắng"
-                        },
-                        new
-                        {
-                            id = 3,
-                            hexCode = "#0000FF",
-                            name = "Xanh Dương"
-                        },
-                        new
-                        {
-                            id = 4,
-                            hexCode = "#FF0000",
-                            name = "Đỏ"
-                        },
-                        new
-                        {
-                            id = 5,
-                            hexCode = "#008000",
-                            name = "Xanh Lá"
+                            type_id = 4
                         });
                 });
 
@@ -151,18 +93,17 @@ namespace Fashion_API.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
 
-                    b.Property<Guid?>("imageKey")
-                        .IsRequired()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("imageUrl")
+                    b.Property<string>("image_url")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("product_id")
+                        .HasColumnType("int");
 
                     b.HasKey("id");
 
-                    b.HasIndex("imageKey");
+                    b.HasIndex("product_id");
 
-                    b.ToTable("productGalleries");
+                    b.ToTable("product_images");
                 });
 
             modelBuilder.Entity("Fashion_API.Model.Products", b =>
@@ -173,7 +114,7 @@ namespace Fashion_API.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
 
-                    b.Property<int>("categoryId")
+                    b.Property<int>("category_id")
                         .HasColumnType("int");
 
                     b.Property<string>("description")
@@ -182,106 +123,26 @@ namespace Fashion_API.Migrations
                     b.Property<double?>("discount")
                         .HasColumnType("float");
 
+                    b.Property<string>("image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("name")
                         .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("price")
-                        .HasColumnType("float");
+                    b.Property<int>("stock")
+                        .HasColumnType("int");
 
-                    b.Property<string>("slug")
+                    b.Property<string>("total_sold")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
 
-                    b.HasIndex("categoryId");
+                    b.HasIndex("category_id");
 
                     b.ToTable("products");
-
-                    b.HasData(
-                        new
-                        {
-                            id = 1,
-                            categoryId = 1,
-                            description = "mo ta",
-                            discount = 5.0,
-                            name = "pÁo thun",
-                            price = 500000.0,
-                            slug = "ao-thun"
-                        },
-                        new
-                        {
-                            id = 2,
-                            categoryId = 2,
-                            description = "mo ta",
-                            discount = 0.0,
-                            name = "pÁo sơ mi",
-                            price = 520000.0,
-                            slug = "ao-so-mi"
-                        },
-                        new
-                        {
-                            id = 3,
-                            categoryId = 3,
-                            description = "mo ta",
-                            discount = 15.0,
-                            name = "pQuần thun",
-                            price = 400000.0,
-                            slug = "quan-thun"
-                        },
-                        new
-                        {
-                            id = 4,
-                            categoryId = 4,
-                            description = "mo ta",
-                            discount = 5.0,
-                            name = "pQuần kaki",
-                            price = 460000.0,
-                            slug = "quan-kaki"
-                        },
-                        new
-                        {
-                            id = 5,
-                            categoryId = 5,
-                            description = "mo ta",
-                            discount = 5.0,
-                            name = "pMũ lưỡi trai",
-                            price = 500000.0,
-                            slug = "mu-luoi-trai"
-                        },
-                        new
-                        {
-                            id = 6,
-                            categoryId = 6,
-                            description = "mo ta ",
-                            discount = 5.0,
-                            name = "púi xách",
-                            price = 500000.0,
-                            slug = "tui-xach"
-                        });
-                });
-
-            modelBuilder.Entity("Fashion_API.Model.ProductStock", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
-
-                    b.Property<int>("productVariantId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("quantity")
-                        .HasColumnType("int");
-
-                    b.HasKey("id");
-
-                    b.HasIndex("productVariantId")
-                        .IsUnique();
-
-                    b.ToTable("ProductStocks");
                 });
 
             modelBuilder.Entity("Fashion_API.Model.ProductTypes", b =>
@@ -292,42 +153,37 @@ namespace Fashion_API.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
 
+                    b.Property<string>("image")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("name")
                         .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
-
-                    b.Property<string>("slug")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
 
-                    b.ToTable("productTypes");
+                    b.ToTable("product_types");
 
                     b.HasData(
                         new
                         {
                             id = 1,
-                            name = "Áo",
-                            slug = "ao"
+                            name = "Áo"
                         },
                         new
                         {
                             id = 2,
-                            name = "Quần",
-                            slug = "quan"
+                            name = "Quần"
                         },
                         new
                         {
                             id = 3,
-                            name = "Nón",
-                            slug = "non"
+                            name = "Nón"
                         },
                         new
                         {
                             id = 4,
-                            name = "Phụ kiện",
-                            slug = "phu-kien"
+                            name = "Phụ kiện"
                         });
                 });
 
@@ -339,31 +195,68 @@ namespace Fashion_API.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
 
-                    b.Property<int>("colorId")
+                    b.Property<double>("new_price")
+                        .HasColumnType("float");
+
+                    b.Property<double>("price")
+                        .HasColumnType("float");
+
+                    b.Property<int>("product_id")
                         .HasColumnType("int");
 
-                    b.Property<Guid?>("imageKey")
+                    b.Property<string>("sku")
                         .IsRequired()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("productId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("sizeId")
+                    b.Property<int>("stock")
                         .HasColumnType("int");
 
                     b.HasKey("id");
 
-                    b.HasIndex("colorId");
+                    b.HasIndex("product_id");
 
-                    b.HasIndex("productId");
-
-                    b.HasIndex("sizeId");
-
-                    b.ToTable("productVariants");
+                    b.ToTable("product_variant");
                 });
 
-            modelBuilder.Entity("Fashion_API.Model.Size", b =>
+            modelBuilder.Entity("Fashion_API.Model.Users", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
+
+                    b.Property<string>("avatar")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("is_looked")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("phone")
+                        .HasColumnType("int");
+
+                    b.Property<int>("role")
+                        .HasColumnType("int");
+
+                    b.HasKey("id");
+
+                    b.ToTable("users");
+                });
+
+            modelBuilder.Entity("Fashion_API.Model.Variants", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
@@ -372,110 +265,208 @@ namespace Fashion_API.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
 
                     b.Property<string>("name")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
 
-                    b.ToTable("size");
+                    b.ToTable("variants");
 
                     b.HasData(
                         new
                         {
                             id = 1,
-                            name = "S"
+                            name = "Màu sắc"
                         },
                         new
                         {
                             id = 2,
-                            name = "M"
+                            name = "Kích cỡ"
+                        });
+                });
+
+            modelBuilder.Entity("Fashion_API.Model.VariantValues", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
+
+                    b.Property<string>("image")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("value")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("variant_id")
+                        .HasColumnType("int");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("variant_id");
+
+                    b.ToTable("variant_values");
+
+                    b.HasData(
+                        new
+                        {
+                            id = 1,
+                            value = "Đen",
+                            variant_id = 1
+                        },
+                        new
+                        {
+                            id = 2,
+                            value = "Trắng",
+                            variant_id = 1
                         },
                         new
                         {
                             id = 3,
-                            name = "L"
+                            value = "Xám",
+                            variant_id = 1
                         },
                         new
                         {
                             id = 4,
-                            name = "XL"
+                            value = "Nâu",
+                            variant_id = 1
                         },
                         new
                         {
                             id = 5,
-                            name = "2XL"
+                            value = "Xanh lá",
+                            variant_id = 1
+                        },
+                        new
+                        {
+                            id = 6,
+                            value = "Xanh lam",
+                            variant_id = 1
+                        },
+                        new
+                        {
+                            id = 7,
+                            value = "Cam",
+                            variant_id = 1
+                        },
+                        new
+                        {
+                            id = 8,
+                            value = "Tím",
+                            variant_id = 1
+                        },
+                        new
+                        {
+                            id = 9,
+                            value = "Đỏ",
+                            variant_id = 1
+                        },
+                        new
+                        {
+                            id = 10,
+                            value = "Vàng",
+                            variant_id = 1
+                        },
+                        new
+                        {
+                            id = 11,
+                            value = "S",
+                            variant_id = 2
+                        },
+                        new
+                        {
+                            id = 12,
+                            value = "M",
+                            variant_id = 2
+                        },
+                        new
+                        {
+                            id = 13,
+                            value = "L",
+                            variant_id = 2
+                        },
+                        new
+                        {
+                            id = 14,
+                            value = "XL",
+                            variant_id = 2
+                        },
+                        new
+                        {
+                            id = 15,
+                            value = "2XL",
+                            variant_id = 2
+                        },
+                        new
+                        {
+                            id = 16,
+                            value = "3XL",
+                            variant_id = 2
+                        },
+                        new
+                        {
+                            id = 17,
+                            value = "4XL",
+                            variant_id = 2
                         });
                 });
 
             modelBuilder.Entity("Fashion_API.Model.Categories", b =>
                 {
-                    b.HasOne("Fashion_API.Model.ProductTypes", "productTypes")
+                    b.HasOne("Fashion_API.Model.ProductTypes", "product_types")
                         .WithMany("categories")
-                        .HasForeignKey("productTypeId")
+                        .HasForeignKey("type_id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("productTypes");
+                    b.Navigation("product_types");
                 });
 
             modelBuilder.Entity("Fashion_API.Model.ProductGallery", b =>
                 {
-                    b.HasOne("Fashion_API.Model.ProductVariant", "productVariant")
-                        .WithMany("productGalleries")
-                        .HasForeignKey("imageKey")
-                        .HasPrincipalKey("imageKey")
+                    b.HasOne("Fashion_API.Model.Products", "products")
+                        .WithMany("product_images")
+                        .HasForeignKey("product_id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("productVariant");
+                    b.Navigation("products");
                 });
 
             modelBuilder.Entity("Fashion_API.Model.Products", b =>
                 {
                     b.HasOne("Fashion_API.Model.Categories", "categories")
                         .WithMany("products")
-                        .HasForeignKey("categoryId")
+                        .HasForeignKey("category_id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("categories");
                 });
 
-            modelBuilder.Entity("Fashion_API.Model.ProductStock", b =>
-                {
-                    b.HasOne("Fashion_API.Model.ProductVariant", "productVariant")
-                        .WithOne("productStock")
-                        .HasForeignKey("Fashion_API.Model.ProductStock", "productVariantId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("productVariant");
-                });
-
             modelBuilder.Entity("Fashion_API.Model.ProductVariant", b =>
                 {
-                    b.HasOne("Fashion_API.Model.Color", "color")
-                        .WithMany("productVariants")
-                        .HasForeignKey("colorId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Fashion_API.Model.Products", "products")
-                        .WithMany("productVariant")
-                        .HasForeignKey("productId")
+                        .WithMany("product_variant")
+                        .HasForeignKey("product_id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("Fashion_API.Model.Size", "size")
-                        .WithMany("productVariants")
-                        .HasForeignKey("sizeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("color");
 
                     b.Navigation("products");
+                });
 
-                    b.Navigation("size");
+            modelBuilder.Entity("Fashion_API.Model.VariantValues", b =>
+                {
+                    b.HasOne("Fashion_API.Model.Variants", "variants")
+                        .WithMany("variant_values")
+                        .HasForeignKey("variant_id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("variants");
                 });
 
             modelBuilder.Entity("Fashion_API.Model.Categories", b =>
@@ -483,14 +474,11 @@ namespace Fashion_API.Migrations
                     b.Navigation("products");
                 });
 
-            modelBuilder.Entity("Fashion_API.Model.Color", b =>
-                {
-                    b.Navigation("productVariants");
-                });
-
             modelBuilder.Entity("Fashion_API.Model.Products", b =>
                 {
-                    b.Navigation("productVariant");
+                    b.Navigation("product_images");
+
+                    b.Navigation("product_variant");
                 });
 
             modelBuilder.Entity("Fashion_API.Model.ProductTypes", b =>
@@ -498,17 +486,9 @@ namespace Fashion_API.Migrations
                     b.Navigation("categories");
                 });
 
-            modelBuilder.Entity("Fashion_API.Model.ProductVariant", b =>
+            modelBuilder.Entity("Fashion_API.Model.Variants", b =>
                 {
-                    b.Navigation("productGalleries");
-
-                    b.Navigation("productStock")
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Fashion_API.Model.Size", b =>
-                {
-                    b.Navigation("productVariants");
+                    b.Navigation("variant_values");
                 });
 #pragma warning restore 612, 618
         }

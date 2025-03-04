@@ -1,6 +1,7 @@
-using Fashion_API.Model;
+﻿using Fashion_API.Model;
 using Fashion_API.Service;
 using Microsoft.EntityFrameworkCore;
+using Fashion_API.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +25,7 @@ builder.Services.AddCors(
     );
 //#3_Add Scoped
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IVariantService, VariantService>();
 //#4_jsoninorse
 
 var app = builder.Build();
@@ -42,5 +44,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+
 
 app.Run();
